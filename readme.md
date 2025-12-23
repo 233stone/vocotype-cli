@@ -30,7 +30,7 @@ VocoType 是一款智能语音输入工具，通过快捷键即可将语音实�
 
 | OS | Download |
 |---|---|
-| **Windows** | [![Setup](https://img.shields.io/badge/Setup-x64-blue)](https://github.com/233stone/vocotype-cli/releases/download/v1.1.3/VocoType_1.1.3_x64-setup.exe)  |
+| **Windows** | [![Setup](https://img.shields.io/badge/Setup-x64-blue)](https://github.com/233stone/vocotype-cli/releases/download/v1.1.4/VocoType_1.1.4_x64-setup.exe)  |
 | **macOS** | [![DMG](https://img.shields.io/badge/DMG-Apple%20Silicon-black)](https://github.com/233stone/vocotype-cli/releases/download/v1.1.2/VocoType_1.1.2_universal.dmg) [![DMG](https://img.shields.io/badge/DMG-Intel-black)](https://github.com/233stone/vocotype-cli/releases/download/v1.1.2/VocoType_1.1.2_universal.dmg)  |
 ---
 
