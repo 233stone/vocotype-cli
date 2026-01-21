@@ -25,14 +25,17 @@ VocoType 是一款智能语音输入工具，通过快捷键即可将语音实�
   您的浏览器不支持视频播放。
 </video>
 
+
 ## 下载
 
-| OS          | Download                                                                                                                                                                                                                                                                                                        |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Windows** | [![Setup](https://img.shields.io/badge/Setup-x64-blue)](https://github.com/233stone/vocotype-cli/releases/download/v1.0.0/VocoType_1.0.0_x64-setup.exe)                                                                                                                                                         |
-| **macOS**   | [![DMG](https://img.shields.io/badge/DMG-Apple%20Silicon-black)](https://github.com/233stone/vocotype-cli/releases/download/v1.0.0/VocoType_1.0.0_aarch64.dmg) [![DMG](https://img.shields.io/badge/DMG-Intel-black)](https://github.com/233stone/vocotype-cli/releases/download/v1.0.0/VocoType_1.0.0_x64.dmg) |
-
+| OS | Download |
+|---|---|
+| **Windows** | [![Setup](https://img.shields.io/badge/Setup-x64-blue)](https://github.com/233stone/vocotype-cli/releases/download/v1.2.1/VocoType_1.2.1_x64-setup.exe)  | 
+| **macOS** | [![DMG](https://img.shields.io/badge/DMG-Apple%20Silicon-black)](https://github.com/233stone/vocotype-cli/releases/download/v1.2.1/VocoType_1.2.1_Universal.dmg) [![DMG](https://img.shields.io/badge/DMG-Intel-black)](https://github.com/233stone/vocotype-cli/releases/download/v1.2.1/VocoType_1.2.1_Universal.dmg)  |
+| **linux** | https://github.com/LeonardNJU/VocoType-ibus  |
 ---
+
+
 
 ## 🤔 VocoType 为何与众不同？
 
