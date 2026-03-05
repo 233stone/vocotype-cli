@@ -74,7 +74,7 @@ def main() -> None:
             input("按 Enter 停止并退出...")
             _toggle(worker)
         else:
-            keyboard.wait()
+            hotkeys.wait()
     except KeyboardInterrupt:
         logger.info("用户中断，正在退出...")
     finally:
