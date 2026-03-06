@@ -111,20 +111,43 @@ def _simulate_ctrl_v() -> bool:
 
     终端使用 Ctrl+Shift+V，其他应用使用 Ctrl+V。
 
+    检测逻辑：
+    1. 检查 TERM 环境变量，如果设置且不是 'dumb'，可能是终端环境
+    2. 默认使用 Ctrl+V（GUI 应用）
+
     注意：此函数使用 pynput 进行按键模拟，仅用于剪贴板粘贴功能，
     与热键监听功能共用 pynput 依赖。
     """
     try:
+        import os
         from pynput.keyboard import Controller, Key
 
         keyboard = Controller()
 
-        # 使用 Ctrl+V（跨平台通用）
-        with keyboard.pressed(Key.ctrl):
-            keyboard.press('v')
-            keyboard.release('v')
-        time.sleep(0.05)
-        logger.debug("使用 Ctrl+V 模拟粘贴")
+        # 检测是否可能是终端环境
+        is_terminal = False
+        term = os.environ.get('TERM', '')
+        if term and term.lower() not in ('dumb', 'xterm', ''):
+            # 设置了 TERM 环境变量，可能是在终端环境
+            is_terminal = True
+            logger.debug("检测到 TERM=%s，使用终端粘贴模式", term)
+
+        # 根据环境选择粘贴方式
+        if is_terminal:
+            # 终端环境：使用 Ctrl+Shift+V
+            with keyboard.pressed(Key.ctrl, Key.shift):
+                keyboard.press('v')
+                keyboard.release('v')
+            time.sleep(0.05)
+            logger.debug("使用 Ctrl+Shift+V 模拟粘贴（终端）")
+        else:
+            # GUI 环境：使用 Ctrl+V
+            with keyboard.pressed(Key.ctrl):
+                keyboard.press('v')
+                keyboard.release('v')
+            time.sleep(0.05)
+            logger.debug("使用 Ctrl+V 模拟粘贴（GUI）")
+
         return True
 
     except Exception as exc:
