@@ -6,10 +6,16 @@ soundfile==0.13.1
 funasr_onnx==0.4.1
 jieba==0.42.1
 
+# 跨平台键盘输入模拟
+pynput==1.8.1
+
 # Optional backends for model downloading (recommended)
 # 选其一或都装：用于 AutoModel 拉取/缓存模型
 modelscope==1.30.0
 
 # 说明：
 # - 切换为 ONNX 路线（onnxruntime）；如需 GPU/PyTorch，请安装 torch(+cu) 与 torchaudio。
+# - Linux 用户可能需要安装系统依赖：
+#   - Debian/Ubuntu: sudo apt-get install portaudio19-dev libx11-dev libxtst-dev
+#   - Fedora: sudo dnf install portaudio-devel libX11-devel libXtst-devel
 

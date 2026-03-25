@@ -24,7 +24,7 @@ _last_toggle_time = 0.0
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Speak Keyboard prototype")
-    parser.add_argument("--config", help="Path to config JSON")
+    parser.add_argument("--config", default="config.json", help="Path to config JSON")
     parser.add_argument(
         "--once",
         action="store_true",
@@ -74,7 +74,7 @@ def main() -> None:
             input("按 Enter 停止并退出...")
             _toggle(worker)
         else:
-            keyboard.wait()
+            hotkeys.wait()
     except KeyboardInterrupt:
         logger.info("用户中断，正在退出...")
     finally:

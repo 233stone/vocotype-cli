@@ -1,0 +1,36 @@
+{
+  "hotkeys": {
+    "toggle": "f2"
+  },
+  "audio": {
+    "sample_rate": 16000,
+    "block_ms": 20,
+    "device": null,
+    "max_session_bytes": 20971520
+  },
+  "vad": {
+    "start_threshold": 0.02,
+    "stop_threshold": 0.01,
+    "min_speech_ms": 300,
+    "min_silence_ms": 200,
+    "pad_ms": 200
+  },
+  "asr": {
+    "use_vad": false,
+    "use_punc": true,
+    "language": "zh",
+    "hotword": "",
+    "batch_size_s": 60.0
+  },
+  "output": {
+    "dedupe": true,
+    "max_history": 5,
+    "min_chars": 1,
+    "method": "clipboard",
+    "append_newline": false
+  },
+  "logging": {
+    "dir": "logs",
+    "level": "INFO"
+  }
+}
