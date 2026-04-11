@@ -114,6 +114,42 @@ python main.py --save-dataset
 
 > **模型下载**：首次运行时，程序会自动下载约 500MB 的模型文件，请确保网络连接稳定。
 
+### 📁 模型存储位置
+
+模型文件默认下载到用户主目录下的固定位置：
+
+| 操作系统 | 默认模型路径 |
+|---------|-------------|
+| **Windows** | `C:\Users\<用户名>\.vocotype\models\` |
+| **macOS/Linux** | `~/.vocotype/models/` |
+
+模型按类型分类存储：
+```
+.vocotype/
+└── models/
+    ├── asr/      # ASR 语音识别模型
+    ├── vad/      # VAD 语音活动检测模型
+    └── punc/     # 标点恢复模型
+```
+
+**自定义模型存储位置**
+
+如需更改存储位置，可通过设置环境变量 `FUNASR_MODEL_DIR`：
+
+```bash
+# Windows PowerShell
+$env:FUNASR_MODEL_DIR="D:\my-models"
+python main.py
+
+# Windows CMD
+set FUNASR_MODEL_DIR=D:\my-models
+python main.py
+
+# macOS/Linux
+export FUNASR_MODEL_DIR=/path/to/models
+python main.py
+```
+
 ## 🌐 Volcengine 火山引擎 BigASR 流式识别后端（可选）
 
 除了默认的本地 FunASR 离线引擎，VocoType CLI 还支持接入[火山引擎豆包大模型流式语音识别](https://www.volcengine.com/docs/6561/1354869)作为云端识别后端。
