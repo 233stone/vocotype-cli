@@ -14,7 +14,7 @@
 
 **[立即访问官网，下载免费、完整的 VocoType 桌面版](https://vocotype.com)**
 
-**批量录音视频转文字**：**[批量离线语言转文字](https://anxinzhuan.cn)**
+批量录音视频转文字：**[批量离线语言转文字 | Windows、Mac](https://anxinzhuan.cn)**
 
 ## 功能简介
 
