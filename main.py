@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import sys
 import threading
 import time
 
@@ -37,7 +38,13 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    config = load_config(args.config)
+    try:
+        config = load_config(args.config)
+    except (OSError, ValueError) as exc:
+        # Missing/unreadable/malformed --config file: report a clean one-line
+        # error instead of an unhandled traceback.
+        print(f"error: {exc}", file=sys.stderr)
+        raise SystemExit(2)
     
     # 配置日志系统（统一配置）
     from app.config import ensure_logging_dir
@@ -95,7 +102,6 @@ def main() -> None:
             logger.debug("清理热键时出错: %s", exc)
         
         logger.info("所有资源已清理，正常退出")
-        import sys
         sys.exit(0)
 
 
